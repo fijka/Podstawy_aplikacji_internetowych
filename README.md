@@ -1,3 +1,3 @@
-# Podstawy-aplikacji-internetowych
+# Podstawy aplikacji internetowych
 
 Student assignment.
