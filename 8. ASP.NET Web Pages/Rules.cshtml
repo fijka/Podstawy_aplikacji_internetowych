@@ -1,0 +1,31 @@
+﻿@{ 
+    var rules = new List<string>();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Fight Club Rules</h1>
+    <form method="post" action="Redirect.cshtml">
+        <label>Rule:</label>
+        <input type="text" name="rule" value="" />
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+    <ol>
+        @{
+            if (Session["rules"] != null)
+            {
+                rules = (List<string>)Session["rules"];
+            }
+
+            foreach (string rule in rules)
+            {
+                <li>@rule</li>
+            }
+        }
+    </ol>
+</body>
+</html>

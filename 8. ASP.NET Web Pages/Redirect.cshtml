@@ -1,0 +1,16 @@
+﻿@{
+    var rules = new List<string>();
+
+    if (Session["rules"] != null)
+    {
+        rules = (List<string>)Session["rules"];
+    }
+
+    if (!Request.Form["rule"].IsEmpty())
+    {
+        rules.Add(Request["rule"]);
+        Session["rules"] = rules;
+    }
+
+    Response.Redirect("Rules.cshtml");
+}
